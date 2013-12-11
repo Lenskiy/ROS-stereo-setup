@@ -1,0 +1,11 @@
+<launch>
+	<arg name="bag_name" /> 
+	<node pkg="rosbag" type="record" name="rosbag" output="screen" required="true"
+	args="-O $(find stereo_cameras)/bags/$(arg bag_name) -e
+	/stereo/left/camera_info
+	/stereo/left/image_raw/compressed(.*)
+	/stereo/right/camera_info
+	/stereo/right/image_raw/compressed(.*)
+	/tf" > 
+	</node>
+</launch>

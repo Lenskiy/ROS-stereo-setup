@@ -1,0 +1,5 @@
+*.bag
+# Generated files
+bin/
+lib/
+build/
